@@ -1,0 +1,958 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.79.0">
+    <title>คําร้องขอลาพักการศึกษา</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/checkout/">
+    <link rel="shortcut icon" href="img/MJULOGO.gif">
+
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+
+
+    <!-- Custom styles for this template -->
+    <link href="checkout/form-validation.css" rel="stylesheet">
+</head>
+
+<body class="bg-light">
+
+    <div class="container">
+        <main>
+            <div class="py-5 text-center">
+                <img class="d-block mx-auto mb-4" src="img/MJULOGO.gif" alt="" width="10%" height="10%">
+                <h2>คําร้องขอลาพักการศึกษา</h2>
+                <p class="lead">(สําหรับนักศึกษาที่ได้ศึกษามาแล้ว ไม่น้อยกว่าหนึ่งภาคการศึกษา)</p>
+            </div>
+
+            <div class="row g-3">
+                <div class="col align-self-center">
+                    <form class="needs-validation" novalidate>
+                        <div class="row g-3">
+                            <div class="col-sm-3">
+                                <label for="example-date-input" class="from-label">วันที่</label>
+                                <input class="form-control" type="date" value="2011-08-19" id="example-date-input"
+                                    required>
+                                <div class="invalid-feedback">โปรดเลือกวันที่</div>   
+                            </div>
+                            <div class="col-sm-4">
+
+                                <label for="state" class="form-label">ภาคเรียนที่</label>
+                                <select class="form-select" id="state" required>
+                                    <option value="">โปรดเลือก...</option>
+                                    <option>ภาคเรียนที่ 1</option>
+                                    <option>ภาคเรียนที่ 2</option>
+
+                                </select>
+                                <div class="invalid-feedback">โปรดเลือกภาคเรียน</div>
+                            </div>
+
+                            <div class="col-sm-5">
+                                <label for="peekarn" class="form-label">ปีการศึกษา</label>
+                                <input type="number" class="form-control" id="peekarn" placeholder="ระบุเป็น พ.ศ."
+                                    value="" required>
+                                <div class="invalid-feedback"> โปรดระบุปีการศึกษา</div>   
+                            </div>
+
+                            <div class="col-md-2">
+                                <label for="state" class="form-label">คำนำหน้า</label>
+                                <select class="form-select" id="state" required>
+                                    <option value="">โปรดเลือก...</option>
+                                    <option>นาย</option>
+                                    <option>นาง</option>
+                                    <option>นางสาว</option>
+                                </select>
+                                <div class="invalid-feedback">โปรดเลือกคำนำหน้า</div>
+                            </div>
+
+                            <div class="col-sm-5">
+                                <label for="firstName" class="form-label">ข้าพเจ้าชื่อ</label>
+                                <input type="text" class="form-control" id="firstName" placeholder="ชื่อนักศึกษา"
+                                    value="" required>
+                                <div class="invalid-feedback">โปรดระบุชื่อนักศึกษา</div>
+                            </div>
+
+                            <div class="col-sm-5">
+                                <label for="lastName" class="form-label">นามสกุล</label>
+                                <input type="text" class="form-control" id="lastName" placeholder="นามสกุลนักศึกษา"
+                                    value="" required>
+                                <div class="invalid-feedback">โปรดระบุนามสกุลนักศึกษา</div>
+                            </div>
+                            <div class="col-sm-4">
+                                <label for="codestudent" class="form-label">รหัสนักศึกษา</label>
+                                <input type="number" class="form-control" id="codestudent"
+                                    placeholder="ระบุรหัสของนักศึกษา 10 หลัก" value="" required>
+                                <div class="invalid-feedback">โปรดระบุรหัสนักศึกษา</div>
+                            </div>
+
+                            <div class="col-sm-4">
+                                <label for="phonest" class="form-label">เบอร์โทรศัพท์</label>
+                                <input type="number" class="form-control" id="phonest"
+                                    placeholder="ระบุเบอร์โทรศัพท์ของนักศึกษา" value="" required>
+                                <div class="invalid-feedback">โปรดระบุเบอร์โทรศัพท์</div>
+                            </div>
+                            <div class="col-md-2">
+                                <label for="ptee" class="form-label">หลักสูตร ปริญญาตรี</label>
+                                <select class="form-select" id="ptee" required>
+                                    <option value="">โปรดเลือก...</option>
+                                    <option>4-5 ปี</option>
+                                    <option>4 ปี เทียบเข้าเรียน (2ปี)</option>
+                                </select>
+                                <div class="invalid-feedback">โปรดเลือกหลักสูตร</div> 
+                            </div>
+                            <div class="col-md-2">
+                                <label for="park" class="form-label">ภาค</label>
+                                <select class="form-select" id="park" required>
+                                    <option value="">โปรดเลือก...</option>
+                                    <option>ภาคปกติ</option>
+                                    <option>ภาคสมทบ</option>
+
+                                </select>
+                                <div class="invalid-feedback">
+                                    โปรดเลือกภาคการศึกษา
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="kana" class="form-label">คณะ</label>
+                                <select class="form-select" id="kana" required>
+                                    <option value="">โปรดเลือก...</option>
+                                    <option>ศิลปศาสตร์</option>
+                                    <option>บริหารธุรกิจ</option>
+                                    <option>วิทยาศาสตร์</option>
+                                    <option>เศรษฐศาสตร์</option> 
+                                    <option>บัณฑิตวิทยาลัย</option>
+                                    <option>ธุรกิจการเกษตร</option> 
+                                    <option>วิทยาลัยนานาชาติ</option>
+                                    <option>พัฒนาการท่องเที่ยว</option>
+                                    <option>ผลิตกรรมการเกษตร</option>
+                                    <option>วิทยาลัยบริหารศาสตร์</option>
+                                    <option>วิทยาลัยพลังงานทดแทน</option>
+                                    <option>สารสนเทศและการสื่อสาร</option>
+                                    <option>สัตว์ศาสตร์และเทคโนโลยี</option>
+                                    <option>วิศวกรรมและอุตสาหกรรมเกษตร</option>
+                                    <option>เทคโนโลยีการประมงและทรัพยากรทางน้ำ</option>
+                                    <option>สถาปัตยกรรมศาสตร์และการออกแบบสิ่งแวดล้อม</option>
+                                </select>
+                                <div class="invalid-feedback">โปรดเลือกคณะ</div>  
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="saka" class="form-label">สาขา</label>
+                                <select class="form-select" id="saka" required>
+                                    <option value="">โปรดเลือก...</option>
+                                    <option>อารักขาพืช</option>
+                                    <option>กีฏวิทยา</option>
+                                    <option>ส่งเสริมการเกษตร</option>
+                                    <option>พืชศาสตร์ (พืชไร่)</option>
+                                    <option>พืชศาสตร์ (พืชสวนประดับ)</option>
+                                    <option>พืชศาสตร์ (พืชผัก)</option>
+                                    <option>วิทยาศาสตรบัณฑิต (เกษตรศาสตร์) สาขาวิชาพืชไร่ (ต่อเนื่อง 2 ปี)</option>
+                                    <option>พืชไร่</option>
+                                    <option>วิทยาศาสตรบัณฑิต (เกษตรศาสตร์) สาขาวิชาพืชไร่</option>
+                                    <option>พืชศาสตร์ สาขาวิชาพืชสวนประดับ</option>
+                                    <option>พืชศาสตร์ (พืชสวน)</option>
+                                    <option>พืชศาสตร์ สาขาวิชาพืชผัก</option>
+                                    <option>พืชศาสตร์ (พืชผัก)</option>
+                                    <option>พืชศาสตร์ (ไม้ผล)</option>
+                                    <option>พืชศาสตร์ (ไม้ผล)</option>
+                                    <option>ปฐพีศาสตร์</option>
+                                    <option>เกษตรเคมี</option>
+                                    <option>ส่งเสริมการเกษตร</option>
+                                    <option>ส่งเสริมและพัฒนาการเกษตร</option>
+                                    <option>วิทยาศาสตรบัณฑิต (เกษตรศาสตร์) สาขาวิชาวิทยาการสมุนไพร (สหวิทยาการ)</option>
+                                    <option>วิทยาศาสตรบัณฑิต (เกษตรศาสตร์) สาขาวิชาอารักขาพืช วิชาเอกโรคพืช</option>
+                                    <option>วิทยาศาสตรบัณฑิต (เกษตรศาสตร์) สาขาวิชาอารักขาพืช เอกกีฏวิทยา</option>
+                                    <option>การพัฒนาส่งเสริมและนิเทศศาสตร์เกษตร</option>
+                                    <option>วิทยาศาสตรบัณฑิต (เกษตรศาสตร์) สาขาวิชาพืชไร่</option>
+                                    <option>การพัฒนาส่งเสริมและนิเทศศาสตร์เกษตร</option>
+                                    <option>วิทยาศาสตรบัณฑิต (เกษตรศาสตร์) สาขาวิชาพืชสวน</option>
+                                    <option>วิทยาศาสตรบัณฑิต (เกษตรศาสตร์) สาขาวิชาพืชสวน สาขาพืชสวนประดับ</option>
+                                    <option>วิทยาศาสตรบัณฑิต (เกษตรศาสตร์) สาขาวิชาพืชสวน สาขาพืชผัก</option>
+                                    <option>วิทยาศาสตรบัณฑิต (เกษตรศาสตร์) สาขาวิชาพืชสวน สาขาไม้ผล</option>
+                                    <option>วิทยาศาสตรบัณฑิต (เกษตรศาสตร์) สาขาวิชาอารักขาพืช</option>
+                                    <option>วิทยาศาสตรบัณฑิต (เกษตรศาสตร์) สาขาวิชาอารักขาพืช วิชาเอกกีฏวิทยา</option>
+                                    <option>วิทยาศาสตรบัณฑิต (เกษตรศาสตร์) สาขาวิชาอารักขาพืช วิชาเอกโรคพืชวิทยา
+                                    </option>
+                                    <option>วิทยาศาสตรบัณฑิต (เกษตรศาสตร์) สาขาวิชาอารักขาพืช วิชาเอกวัชพืชวิทยา
+                                    </option>
+                                    <option>วิทยาการสมุนไพร</option>
+                                    <option>การส่งเสริมและสื่อสารเกษตร</option>
+                                    <option>วิทยาศาสตรบัณฑิต (ต่อเนื่อง 2 ปี) สาขาวิชาส่งเสริมการเกษตร</option>
+                                    <option>วิทยาศาสตรบัณฑิต (ต่อเนื่อง 2 ปี) สาขาวิชาส่งเสริมและพัฒนาการเกษตร</option>
+                                    <option>---------------------------------------------------------------------------
+                                    </option>
+                                    <option>การตลาด </option>
+                                    <option>ส่งเสริมและพัฒนาการเกษตร </option>
+                                    <option>ส่งเสริมการเกษตร </option>
+                                    <option>วิทยาศาสตรบัณฑิต (ต่อเนื่อง 2 ปี) สาขาวิชาส่งเสริมการเกษตร </option>
+                                    <option>---------------------------------------------------------------------------
+                                    </option>
+                                    <option>วิศวกรรมเกษตร </option>
+                                    <option>เทคโนโลยีหลังการเก็บเกี่ยว </option>
+                                    <option>วิศวกรรมอาหาร </option>
+                                    <option>วิทยาศาสตร์และเทคโนโลยีการอาหาร </option>
+                                    <option>วัสดุศาสตร์ (อุตสาหกรรมยาง) </option>
+                                    <option>วิทยาศาสตรบัณฑิต (เทคโนโลยียางและพอลิเมอร์) </option>
+                                    <option>---------------------------------------------------------------------------
+                                    </option>
+                                    <option>วิทยาการคอมพิวเตอร์ </option>
+                                    <option>เทคโนโลยีชีวภาพ </option>
+                                    <option>เทคโนโลยีสารสนเทศ </option>
+                                    <option>เคมี</option>
+                                    <option>สถิติ </option>
+                                    <option>คณิตศาสตร์</option>
+                                    <option>วัสดุศาสตร์ </option>
+                                    <option>เคมีอุตสาหกรรมและเทคโนโลยีสิ่งทอ </option>
+                                    <option>ฟิสิกส์ประยุกต์ </option>
+                                    <option>---------------------------------------------------------------------------
+                                    </option>
+                                    <option>การปกครองท้องถิ่น </option>
+                                    <option>รัฐศาสตร์</option>
+                                    <option>การจัดการชุมชน </option>
+                                    <option>การบริหารท้องถิ่น </option>
+                                    <option>รัฐประศาสนศาสตร์</option>
+                                    <option>---------------------------------------------------------------------------
+                                    </option>
+                                    <option>บริหารธุรกิจ(การจัดการทั่วไป) </option>
+                                    <option>บริหารธุรกิจ (การตลาด) </option>
+                                    <option>บัญชี</option>
+                                    <option>เทคโนโลยีสารสนเทศทางธุรกิจ </option>
+                                    <option>การเงิน </option>
+                                    <option>การตลาด </option>
+                                    <option>การจัดการทั่วไป </option>
+                                    <option>ระบบสารสนเทศทางธุรกิจ </option>
+                                    <option>การจัดการ </option>
+                                    <option>บริหารธุรกิจ (การจัดการ) </option>
+                                    <option>บริหารธุรกิจ (การเงิน) </option>
+                                    <option>นวัตกรรมธุรกิจค้าปลีกสมัยใหม่ </option>
+                                    <option>---------------------------------------------------------------------------
+                                    </option>
+                                    <option>พัฒนาการท่องเที่ยว </option>
+                                    <option>การจัดการธุรกิจท่องเที่ยว </option>
+                                    <option>---------------------------------------------------------------------------
+                                    </option>
+                                    <option>การประมง </option>
+                                    <option>การประมง (การเพาะเลี้ยงสัตว์น้ำ) </option>
+                                    <option>การประมง (การจัดการประมง) </option>
+                                    <option>นวัตกรรมการจัดการธุรกิจประมง </option>
+                                    <option>---------------------------------------------------------------------------
+                                    </option>
+                                    <option>เศรษฐศาสตร์สหกรณ์ </option>
+                                    <option>เศรษฐศาสตร์เกษตร </option>
+                                    <option>เศรษฐศาสตร์</option>
+                                    <option>เศรษฐศาสตร์สิ่งแวดล้อม </option>
+                                    <option>เศรษฐศาสตร์เกษตร ทรัพยากรและสิ่งแวดล้อม </option>
+                                    <option>เศรษฐศาสตร์ระหว่างประเทศ </option>
+                                    <option>---------------------------------------------------------------------------
+                                    </option>
+                                    <option>ภาษาอังกฤษ </option>
+                                    <option>นิเทศศาสตร์บูรณาการ </option>
+                                    <option>ภาษาไทยสำหรับชาวต่างประเทศ </option>
+                                    <option>---------------------------------------------------------------------------
+                                    </option>
+                                    <option>พลังงานทดแทน </option>
+                                    <option>วิศวกรรมการอนุรักษ์พลังงาน </option>
+                                    <option>---------------------------------------------------------------------------
+                                    </option>
+                                    <option>การจัดการเกษตรอินทรีย์ (หลักสูตรนานาชาติ) </option>
+                                    <option>การจัดการการท่องเที่ยว (หลักสูตรนานาชาติ) </option>
+                                    <option>---------------------------------------------------------------------------
+                                    </option>
+                                    <option>การสื่อสารดิจิทัล </option>
+                                    <option>---------------------------------------------------------------------------
+                                    <option>
+                                    <option>เทคโนโลยีภูมิทัศน์ </option>
+                                    <option>สถาปัตยกรรม </option>
+                                    <option>ภูมิสถาปัตยกรรม </option>
+                                    <option>ภูมิสถาปัตยกรรมศาสตรบัณฑิต (ภูมิสถาปัตยกรรม) </option>
+                                    <option>---------------------------------------------------------------------------
+                                    </option>
+                                    <option>สัตวศาสตร์ </option>
+                                    <option>อาหารสัตว์ </option>
+                                    <option>สัตวศาสตร์ วิชาเอกสัตว์ปีก </option>
+                                    <option>สัตวศาสตร์ วิชาเอกโคนมและโคเนื้อ </option>
+                                    <option>สัตวศาสตร์ วิชาเอกการผลิตสุกร </option>
+                                    <option>สัตวศาสตร์ วิชาเอกอาหารสัตว์ </option>
+
+                                </select>
+                                <div class="invalid-feedback">โปรดเลือกสาขา</div>
+                               </div>
+                            <div class="col-12">
+                                <label for="prasong" class="form-label">มีความประสงค์จะขอลาพักการศึกษา เนื่องจาก</label>
+                                <input type="text" class="form-control" id="prasong"
+                                    placeholder="ระบุความประสงค์ที่จะขอลาพักของนักศึกษา" required>
+                                <div class="invalid-feedback">โปรดกรอกความประสงค์ที่จะขอลาพัก</div>
+                              </div>
+                            <div class="col-9">
+                                <label for="huako"
+                                    class="form-label">พร้อมนี้ได้แนบใบยินยอมขอลาพักการศึกษาจากผู้ปกครอง/ใบรับรองแพทย์/เอกสารอื่นๆ</label>
+                            </div>
+                            <div class="col-3">
+                                <label class="from-label">จึงเรียนมาเพื่อโปรดพิจารณา</label>
+                            </div>
+                            <div class="col-4">
+                                <label class="from-label">ขอแสดงความนับถือ</label>
+                            </div>
+                            <div class="col-4">
+                                <label for="exampleFormControlFile1">นักศึกษา</label>
+                                <input type="file" class="form-control-file" id="exampleFormControlFile1" required>
+                                <div class="invalid-feedback">โปรดอัพโหลดลายเซ็นนักศึกษา</div>  
+                            </div>
+                            <div class="col-4">
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">(2) ความเห็นหัวหน้ากลุ่มภารกิจทะเบียนเรียน ประมวลผลฯ</h5>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                            <label class="form-check-label" for="defaultCheck1">ทราบ นักศึกษาดังกล่าวสามารถลาพักการศึกษาได้    
+                                            </label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1"
+                                                value="option1">
+                                            <label class="form-check-label" for="inlineCheckbox1">ภาคเรียนที่ 1</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2"
+                                                value="option2">
+                                            <label class="form-check-label" for="inlineCheckbox2">ภาคเรียนที่ 2</label>
+                                        </div>
+                                        <div class="col-sm-5">
+                                            <label for="exampleFormControlFile1">หัวหน้ากลุ่มภารกิจทะเบียนเรียนประมวลผลฯ</label>                            
+                                            <input type="file" class="form-control-file" id="exampleFormControlFile1"
+                                                required>
+                                            <div class="invalid-feedback">โปรดอัพโหลดลายเซ็นหัวหน้ากลุ่มภารกิจทะเบียนเรียน ประมวลผลฯ   
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">(3) ความเห็นผู้อํานวยการสํานักบริหารและพัฒนาวิชาการ</h5>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                        <label class="form-check-label" for="defaultCheck1">ทราบ</label>   
+                                    </div>
+                                    <div class="col-sm-5">
+                                        <label
+                                            for="exampleFormControlFile1">ผู้อํานวยการสํานักบริหารและพัฒนาวิชาการ</label>
+                                        <input type="file" class="form-control-file" id="exampleFormControlFile1"
+                                            required>
+                                        <div class="invalid-feedback">โปรดอัพโหลดลายเซ็นผู้อํานวยการสํานักบริหารและพัฒนาวิชาการ    
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">(4) ความเห็นอาจารย์ที่ปรึกษา</h5>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                        <label class="form-check-label" for="defaultCheck1">ทราบ</label>
+                                    </div>
+                                    <div class="col-sm-5">
+                                        <label for="exampleFormControlFile1">อาจารย์ที่ปรึกษา</label>
+                                        <input type="file" class="form-control-file" id="exampleFormControlFile1"
+                                            required>
+                                        <div class="invalid-feedback">โปรดอัพโหลดลายเซ็นอาจารย์ที่ปรึกษา   
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">(5) ความเห็นประธานคณะกรรมการประจําหลักสูตร</h5>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                        <label class="form-check-label" for="defaultCheck1">ทราบ</label>
+                                    </div>
+                                    </div> -->
+                                    <div class="col-sm-5">
+                                        <label for="exampleFormControlFile1">ประธานคณะกรรมการประจําหลักสูตร</label>
+                                        <input type="file" class="form-control-file" id="exampleFormControlFile1"
+                                            required>
+                                        <div class="invalid-feedback">โปรดอัพโหลดลายเซ็นประธานคณะกรรมการประจําหลักสูตร</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">(6) ความเห็นคณบดี</h5>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1"
+                                            value="option1">
+                                        <label class="form-check-label" for="inlineCheckbox1">อนุมัติ</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2"
+                                            value="option2">
+                                        <label class="form-check-label" for="inlineCheckbox2">ไม่ อนุมัติ</label>
+                                    </div>
+                                    <div class="col-sm-5">
+                                        <label for="exampleFormControlFile1">คณบดี</label>
+                                        <input type="file" class="form-control-file" id="exampleFormControlFile1"
+                                            required>
+                                        <div class="invalid-feedback">โปรดอัพโหลดลายเซ็นคณบดี     
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">(7) งานเงินรายได้ กองคลัง ชั้น 2 อาคารอิงคศรีกสิการได้รับชําระเงินจํานวน </h5>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1"
+                                            value="option1">
+                                        <label class="form-check-label" for="inlineCheckbox1">ภาคเรียนที่ 1 1,200บาท</label> 
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2"
+                                            value="option2">
+                                        <label class="form-check-label" for="inlineCheckbox2">ภาคเรียนที่ 2 1,000บาท</label>       
+                                    </div>
+                                    <div class="col-sm-5">
+                                        <label for="exampleFormControlFile1">ผู้รับเงิน</label>
+                                        <input type="file" class="form-control-file" id="exampleFormControlFile1"
+                                            required>
+                                        <div class="invalid-feedback">โปรดอัพโหลดลายเซ็นผู้รับเงิน</div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">(8) ส่งเอกสารคําร้องขอลาพักการศึกษาตัวจริง</h5>
+                                    <label>ให้กลุ่มภารกิจ
+                                        ทะเบียนฯ ชั้น 2 อาคารอํานวย ยศสุข เพื่อบันทึกคําร้องขอลาพัก
+                                        การศึกษา และให้นักศึกษาเก็บหลักฐานใบเสร็จที่ชําระเงินไว้
+                                        เพื่อตรวจสอบการบันทึกการลาพักการศึกษา </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">(9) สําหรับเจ้าหน้าที่บันทึกลงฐานข้อมูล</h5>
+                                    <label for="example-date-input" class="from-label">
+                                        ได้บันทึกการข้อมูลดังกล่าวไว้ในวันที่</label>
+                                    <input class="form-control" type="date" value="2011-08-19" id="example-date-input">
+                                    <div class="col-sm-5">
+                                        <label for="exampleFormControlFile1">เจ้าหน้าที่บันทึก</label>
+                                        <input type="file" class="form-control-file" id="exampleFormControlFile1"
+                                            required>
+                                        <div class="invalid-feedback">โปรดอัพโหลดลายเซ็นเจ้าหน้าที่บันทึก</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="py-5 text-center">
+                          <h2>คํารับรองของผู้ปกครอง</h2>
+                      </div>
+
+                        <div class="row g-3">
+                            <div class="col-sm-2">
+                                <label for="banint" class="form-label">เขียนที่ บ้านเลขที่</label>
+                                <input type="number" class="form-control" id="banint" placeholder="เลขที่บ้าน" value=""
+                                    required>
+                                <div class="invalid-feedback">
+                                    โปรดระบุบ้านเลขที่
+                                </div>
+                            </div>
+
+
+                            <div class="col-sm-2">
+                                <label for="mootee" class="form-label">หมู่ที่</label>
+                                <input type="number" class="form-control" id="mootee" placeholder="เลขที่หมู่บ้าน"
+                                    value="" required>
+                                <div class="invalid-feedback">
+                                    โปรดระบุเลขที่หมู่บ้าน
+                                </div>
+                            </div>
+
+                            <div class="col-sm-4">
+                                <label for="tumbon" class="form-label">ตำบล</label>
+                                <input type="text" class="form-control" id="tumbon" placeholder="ระบุตำบล" value=""
+                                    required>
+                                <div class="invalid-feedback">
+                                    โปรดระบุตำบล
+                                </div>
+                            </div>
+
+                            <div class="col-sm-4">
+                                <label for="aumper" class="form-label">อำเภอ</label>
+                                <input type="text" class="form-control" id="aumper" placeholder="ระบุอำเภอ" value=""
+                                    required>
+                                <div class="invalid-feedback">
+                                    โปรดระบุอำเภอ
+                                </div>
+                            </div>
+
+                            <div class="col-sm-4">
+                                <label for="jangwat" class="form-label">จังหวัด</label>
+                                <input type="text" class="form-control" id="jangwat" placeholder="ระบุจังหวัด" value=""
+                                    required>
+                                <div class="invalid-feedback">
+                                    โปรดระบุจังหวัด
+                                </div>
+                            </div>
+
+                            <div class="col-sm-2">
+                                <label for="paisa" class="form-label">รหัสไปรษสนีย์</label>
+                                <input type="number" class="form-control" id="paisa" placeholder="ระบุรหัสไปรษณีย์"
+                                    value="" required>
+                                <div class="invalid-feedback">
+                                    โปรดระบุรหัสไปรษสนีย์
+                                </div>
+                            </div>
+
+                            <div class="col-sm-3">
+                                <label for="phonest" class="form-label">เบอร์โทรศัพท์</label>
+                                <input type="number" class="form-control" id="phonest"
+                                    placeholder="ระบุเบอร์โทรศัพท์ผู้ปกครอง" value="" required>
+                                <div class="invalid-feedback">
+                                    โปรดระบุเบอร์โทรศัพท์ของผู้ปกครอง
+                                </div>
+                            </div>
+
+                            <div class="col-sm-3">
+                                <label for="example-date-input" class="from-label">วันที่</label>
+                                <input class="form-control" type="date" value="2011-08-19" id="example-date-input">
+                            </div>
+
+                            <div class="col-sm-7">
+                                <label for="state" class="form-label">ยินยอมให้นักศึกษาลาพักการศึกษา
+                                    ในภาคเรียนที่</label>
+                                <select class="form-select" id="state" required>
+                                    <option value="">โปรดเลือก...</option>
+                                    <option>ภาคเรียนที่ 1</option>
+                                    <option>ภาคเรียนที่ 2</option>
+
+                                </select>
+                                <div class="invalid-feedback">
+                                    โปรดเลือกภาคเรียน
+                                </div>
+                            </div>
+
+                            <div class="col-sm-5">
+                                <label for="peekarn" class="form-label">ปีการศึกษา</label>
+                                <input type="number" class="form-control" id="peekarn" placeholder="ระบุเป็น พ.ศ."
+                                    value="" required>
+                                <div class="invalid-feedback">
+                                    โปรดระบุปีการศึกษา
+                                </div>
+                            </div>
+
+                            <div class="col-md-1">
+                                <label>ตามที่</label>
+                            </div>
+                            <div class="col-md-2">
+                                <label for="state" class="form-label">คำนำหน้า</label>
+                                <select class="form-select" id="state" required>
+                                    <option value="">โปรดเลือก...</option>
+                                    <option>นาย</option>
+                                    <option>นาง</option>
+                                    <option>นางสาว</option>
+                                </select>
+                                <div class="invalid-feedback">
+                                    โปรดเลือกคำนำหน้า
+                                </div>
+                            </div>
+
+                            <div class="col-sm-5">
+                                <label for="firstName" class="form-label">ชื่อ</label>
+                                <input type="text" class="form-control" id="firstName" placeholder="ชื่อนักศึกษา"
+                                    value="" required>
+                                <div class="invalid-feedback">
+                                    โปรดระบุชื่อนักศึกษา
+                                </div>
+                            </div>
+
+                            <div class="col-sm-4">
+                                <label for="lastName" class="form-label">นามสกุล</label>
+                                <input type="text" class="form-control" id="lastName" placeholder="นามสกุลนักศึกษา"
+                                    value="" required>
+                                <div class="invalid-feedback">
+                                    โปรดระบุนามสกุลนักศึกษา
+                                </div>
+                            </div>
+
+                            <div class="col-sm-4">
+                                <label for="codestudent" class="form-label">รหัสนักศึกษา</label>
+                                <input type="number" class="form-control" id="codestudent"
+                                    placeholder="ระบุรหัสของนักศึกษา 10 หลัก" value="" required>
+                                <div class="invalid-feedback">
+                                    โปรดระบุรหัสนักศึกษา
+                                </div>
+                            </div>
+
+                            <div class="col-sm-4">
+                                <label for="phonest" class="form-label">เบอร์โทรศัพท์</label>
+                                <input type="number" class="form-control" id="phonest"
+                                    placeholder="ระบุเบอร์โทรศัพท์ของนักศึกษา" value="" required>
+                                <div class="invalid-feedback">
+                                    โปรดระบุเบอร์โทรศัพท์ของนักศึกษา
+                                </div>
+                            </div>
+
+                            <div class="col-md-2">
+                                <label for="state" class="form-label">หลักสูตร ปริญญาตรี</label>
+                                <select class="form-select" id="state" required>
+                                    <option value="">โปรดเลือก...</option>
+                                    <option>4-5 ปี</option>
+                                    <option>4 ปี เทียบเข้าเรียน (2ปี)</option>
+
+                                </select>
+                                <div class="invalid-feedback">
+                                    โปรดเลือกหลักสูตร
+                                </div>
+                            </div>
+
+                            <div class="col-md-2">
+                                <label for="state" class="form-label">ภาค</label>
+                                <select class="form-select" id="state" required>
+                                    <option value="">โปรดเลือก...</option>
+                                    <option>ภาคปกติ</option>
+                                    <option>ภาคสมทบ</option>
+
+                                </select>
+                                <div class="invalid-feedback">
+                                    โปรดเลือกภาคการศึกษา
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="kana" class="form-label">คณะ</label>
+                                <select class="form-select" id="kana" required>
+                                    <option value="">โปรดเลือก...</option>
+                                    <option>ผลิตกรรมการเกษตร</option>
+                                    <option>ธุรกิจการเกษตร</option>
+                                    <option>วิศวกรรมและอุตสาหกรรมเกษตร</option>
+                                    <option>วิทยาศาสตร์</option>
+                                    <option>วิทยาลัยบริหารศาสตร์</option>
+                                    <option>บริหารธุรกิจ</option>
+                                    <option>พัฒนาการท่องเที่ยว</option>
+                                    <option>เทคโนโลยีการประมงและทรัพยากรทางน้ำ</option>
+                                    <option>เศรษฐศาสตร์</option>
+                                    <option>บัณฑิตวิทยาลัย</option>
+                                    <option>ศิลปศาสตร์</option>
+                                    <option>วิทยาลัยพลังงานทดแทน</option>
+                                    <option>วิทยาลัยนานาชาติ</option>
+                                    <option>สารสนเทศและการสื่อสาร</option>
+                                    <option>สถาปัตยกรรมศาสตร์และการออกแบบสิ่งแวดล้อม</option>
+                                    <option>สัตว์ศาสตร์และเทคโนโลยี</option>
+                                </select>
+                                <div class="invalid-feedback">
+                                    โปรดเลือกคณะ
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="saka" class="form-label">สาขา</label>
+                                <select class="form-select" id="saka" required>
+                                    <option value="">โปรดเลือก...</option>
+                                    <option>อารักขาพืช</option>
+                                    <option>กีฏวิทยา</option>
+                                    <option>ส่งเสริมการเกษตร</option>
+                                    <option>พืชศาสตร์ (พืชไร่)</option>
+                                    <option>พืชศาสตร์ (พืชสวนประดับ)</option>
+                                    <option>พืชศาสตร์ (พืชผัก)</option>
+                                    <option>วิทยาศาสตรบัณฑิต (เกษตรศาสตร์) สาขาวิชาพืชไร่ (ต่อเนื่อง 2 ปี)</option>
+                                    <option>พืชไร่</option>
+                                    <option>วิทยาศาสตรบัณฑิต (เกษตรศาสตร์) สาขาวิชาพืชไร่</option>
+                                    <option>พืชศาสตร์ สาขาวิชาพืชสวนประดับ</option>
+                                    <option>พืชศาสตร์ (พืชสวน)</option>
+                                    <option>พืชศาสตร์ สาขาวิชาพืชผัก</option>
+                                    <option>พืชศาสตร์ (พืชผัก)</option>
+                                    <option>พืชศาสตร์ (ไม้ผล)</option>
+                                    <option>พืชศาสตร์ (ไม้ผล)</option>
+                                    <option>ปฐพีศาสตร์</option>
+                                    <option>เกษตรเคมี</option>
+                                    <option>ส่งเสริมการเกษตร</option>
+                                    <option>ส่งเสริมและพัฒนาการเกษตร</option>
+                                    <option>วิทยาศาสตรบัณฑิต (เกษตรศาสตร์) สาขาวิชาวิทยาการสมุนไพร (สหวิทยาการ)</option>
+                                    <option>วิทยาศาสตรบัณฑิต (เกษตรศาสตร์) สาขาวิชาอารักขาพืช วิชาเอกโรคพืช</option>
+                                    <option>วิทยาศาสตรบัณฑิต (เกษตรศาสตร์) สาขาวิชาอารักขาพืช เอกกีฏวิทยา</option>
+                                    <option>การพัฒนาส่งเสริมและนิเทศศาสตร์เกษตร</option>
+                                    <option>วิทยาศาสตรบัณฑิต (เกษตรศาสตร์) สาขาวิชาพืชไร่</option>
+                                    <option>การพัฒนาส่งเสริมและนิเทศศาสตร์เกษตร</option>
+                                    <option>วิทยาศาสตรบัณฑิต (เกษตรศาสตร์) สาขาวิชาพืชสวน</option>
+                                    <option>วิทยาศาสตรบัณฑิต (เกษตรศาสตร์) สาขาวิชาพืชสวน สาขาพืชสวนประดับ</option>
+                                    <option>วิทยาศาสตรบัณฑิต (เกษตรศาสตร์) สาขาวิชาพืชสวน สาขาพืชผัก</option>
+                                    <option>วิทยาศาสตรบัณฑิต (เกษตรศาสตร์) สาขาวิชาพืชสวน สาขาไม้ผล</option>
+                                    <option>วิทยาศาสตรบัณฑิต (เกษตรศาสตร์) สาขาวิชาอารักขาพืช</option>
+                                    <option>วิทยาศาสตรบัณฑิต (เกษตรศาสตร์) สาขาวิชาอารักขาพืช วิชาเอกกีฏวิทยา</option>
+                                    <option>วิทยาศาสตรบัณฑิต (เกษตรศาสตร์) สาขาวิชาอารักขาพืช วิชาเอกโรคพืชวิทยา
+                                    </option>
+                                    <option>วิทยาศาสตรบัณฑิต (เกษตรศาสตร์) สาขาวิชาอารักขาพืช วิชาเอกวัชพืชวิทยา
+                                    </option>
+                                    <option>วิทยาการสมุนไพร</option>
+                                    <option>การส่งเสริมและสื่อสารเกษตร</option>
+                                    <option>วิทยาศาสตรบัณฑิต (ต่อเนื่อง 2 ปี) สาขาวิชาส่งเสริมการเกษตร</option>
+                                    <option>วิทยาศาสตรบัณฑิต (ต่อเนื่อง 2 ปี) สาขาวิชาส่งเสริมและพัฒนาการเกษตร</option>
+                                    <option>---------------------------------------------------------------------------
+                                    </option>
+                                    <option>การตลาด </option>
+                                    <option>ส่งเสริมและพัฒนาการเกษตร </option>
+                                    <option>ส่งเสริมการเกษตร </option>
+                                    <option>วิทยาศาสตรบัณฑิต (ต่อเนื่อง 2 ปี) สาขาวิชาส่งเสริมการเกษตร </option>
+                                    <option>---------------------------------------------------------------------------
+                                    </option>
+                                    <option>วิศวกรรมเกษตร </option>
+                                    <option>เทคโนโลยีหลังการเก็บเกี่ยว </option>
+                                    <option>วิศวกรรมอาหาร </option>
+                                    <option>วิทยาศาสตร์และเทคโนโลยีการอาหาร </option>
+                                    <option>วัสดุศาสตร์ (อุตสาหกรรมยาง) </option>
+                                    <option>วิทยาศาสตรบัณฑิต (เทคโนโลยียางและพอลิเมอร์) </option>
+                                    <option>---------------------------------------------------------------------------
+                                    </option>
+                                    <option>วิทยาการคอมพิวเตอร์ </option>
+                                    <option>เทคโนโลยีชีวภาพ </option>
+                                    <option>เทคโนโลยีสารสนเทศ </option>
+                                    <option>เคมี</option>
+                                    <option>สถิติ </option>
+                                    <option>คณิตศาสตร์</option>
+                                    <option>วัสดุศาสตร์ </option>
+                                    <option>เคมีอุตสาหกรรมและเทคโนโลยีสิ่งทอ </option>
+                                    <option>ฟิสิกส์ประยุกต์ </option>
+                                    <option>---------------------------------------------------------------------------
+                                    </option>
+                                    <option>การปกครองท้องถิ่น </option>
+                                    <option>รัฐศาสตร์</option>
+                                    <option>การจัดการชุมชน </option>
+                                    <option>การบริหารท้องถิ่น </option>
+                                    <option>รัฐประศาสนศาสตร์</option>
+                                    <option>---------------------------------------------------------------------------
+                                    </option>
+                                    <option>บริหารธุรกิจ(การจัดการทั่วไป) </option>
+                                    <option>บริหารธุรกิจ (การตลาด) </option>
+                                    <option>บัญชี</option>
+                                    <option>เทคโนโลยีสารสนเทศทางธุรกิจ </option>
+                                    <option>การเงิน </option>
+                                    <option>การตลาด </option>
+                                    <option>การจัดการทั่วไป </option>
+                                    <option>ระบบสารสนเทศทางธุรกิจ </option>
+                                    <option>การจัดการ </option>
+                                    <option>บริหารธุรกิจ (การจัดการ) </option>
+                                    <option>บริหารธุรกิจ (การเงิน) </option>
+                                    <option>นวัตกรรมธุรกิจค้าปลีกสมัยใหม่ </option>
+                                    <option>---------------------------------------------------------------------------
+                                    </option>
+                                    <option>พัฒนาการท่องเที่ยว </option>
+                                    <option>การจัดการธุรกิจท่องเที่ยว </option>
+                                    <option>---------------------------------------------------------------------------
+                                    </option>
+                                    <option>การประมง </option>
+                                    <option>การประมง (การเพาะเลี้ยงสัตว์น้ำ) </option>
+                                    <option>การประมง (การจัดการประมง) </option>
+                                    <option>นวัตกรรมการจัดการธุรกิจประมง </option>
+                                    <option>---------------------------------------------------------------------------
+                                    </option>
+                                    <option>เศรษฐศาสตร์สหกรณ์ </option>
+                                    <option>เศรษฐศาสตร์เกษตร </option>
+                                    <option>เศรษฐศาสตร์</option>
+                                    <option>เศรษฐศาสตร์สิ่งแวดล้อม </option>
+                                    <option>เศรษฐศาสตร์เกษตร ทรัพยากรและสิ่งแวดล้อม </option>
+                                    <option>เศรษฐศาสตร์ระหว่างประเทศ </option>
+                                    <option>---------------------------------------------------------------------------
+                                    </option>
+                                    <option>ภาษาอังกฤษ </option>
+                                    <option>นิเทศศาสตร์บูรณาการ </option>
+                                    <option>ภาษาไทยสำหรับชาวต่างประเทศ </option>
+                                    <option>---------------------------------------------------------------------------
+                                    </option>
+                                    <option>พลังงานทดแทน </option>
+                                    <option>วิศวกรรมการอนุรักษ์พลังงาน </option>
+                                    <option>---------------------------------------------------------------------------
+                                    </option>
+                                    <option>การจัดการเกษตรอินทรีย์ (หลักสูตรนานาชาติ) </option>
+                                    <option>การจัดการการท่องเที่ยว (หลักสูตรนานาชาติ) </option>
+                                    <option>---------------------------------------------------------------------------
+                                    </option>
+                                    <option>การสื่อสารดิจิทัล </option>
+                                    <option>---------------------------------------------------------------------------
+                                    <option>
+                                    <option>เทคโนโลยีภูมิทัศน์ </option>
+                                    <option>สถาปัตยกรรม </option>
+                                    <option>ภูมิสถาปัตยกรรม </option>
+                                    <option>ภูมิสถาปัตยกรรมศาสตรบัณฑิต (ภูมิสถาปัตยกรรม) </option>
+                                    <option>---------------------------------------------------------------------------
+                                    </option>
+                                    <option>สัตวศาสตร์ </option>
+                                    <option>อาหารสัตว์ </option>
+                                    <option>สัตวศาสตร์ วิชาเอกสัตว์ปีก </option>
+                                    <option>สัตวศาสตร์ วิชาเอกโคนมและโคเนื้อ </option>
+                                    <option>สัตวศาสตร์ วิชาเอกการผลิตสุกร </option>
+                                    <option>สัตวศาสตร์ วิชาเอกอาหารสัตว์ </option>
+                                </select>
+                                <div class="invalid-feedback">
+                                    โปรดเลือกสาขา
+                                </div>
+                            </div>
+
+                            <div class="col-sm-8">
+                                <label for="state"
+                                    class="form-label">ซึ่งเป็นนักศึกษาในความปกครองของข้าพเจ้ามีความประสงค์จะขอลาพักการศึกษา
+                                    ในภาคเรียนที่</label>
+                                <select class="form-select" id="state" required>
+                                    <option value="">โปรดเลือก...</option>
+                                    <option>ภาคเรียนที่ 1</option>
+                                    <option>ภาคเรียนที่ 2</option>
+
+                                </select>
+                                <div class="invalid-feedback">
+                                    โปรดเลือกภาคเรียน
+                                </div>
+                            </div>
+
+                            <div class="col-sm-4">
+                                <label for="lastName" class="form-label">ปีการศึกษา</label>
+                                <input type="number" class="form-control" id="lastName" placeholder="ระบุเป็น พ.ศ."
+                                    value="" required>
+                                <div class="invalid-feedback">
+                                    โปรดระบุปีการศึกษา
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <label for="address" class="form-label">เนื่องจาก</label>
+                                <input type="text" class="form-control" id="address" placeholder="ระบุเหตุผล" required>
+                                <div class="invalid-feedback">
+                                    โปรดระบุเหตุผล
+                                </div>
+                            </div>
+
+                            <div class="col-md-2">
+                                <label for="state" class="form-label">คำนำหน้า</label>
+                                <select class="form-select" id="state" required>
+                                    <option value="">โปรดเลือก...</option>
+                                    <option>นาย</option>
+                                    <option>นาง</option>
+                                    <option>นางสาว</option>
+                                </select>
+                                <div class="invalid-feedback">
+                                    โปรดเลือกคำนำหน้า
+                                </div>
+                            </div>
+
+                            <div class="col-sm-5">
+                                <label for="firstName" class="form-label">ข้าพเจ้าชื่อ</label>
+                                <input type="text" class="form-control" id="firstName" placeholder="ชื่อผู้ปกครอง"
+                                    value="" required>
+                                <div class="invalid-feedback">
+                                    โปรดระบุชื่อผู้ปกครอง
+                                </div>
+                            </div>
+
+                            <div class="col-sm-5">
+                                <label for="lastName" class="form-label">นามสกุล</label>
+                                <input type="text" class="form-control" id="lastName" placeholder="นามสกุลผู้ปกครอง"
+                                    value="" required>
+                                <div class="invalid-feedback">
+                                    โปรดระบุนามสกุลผู้ปกครอง
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                              <label for="address" class="form-label">ผู้ปกครองของนักศึกษาดังกล่าวข้างต้น
+                                  ได้รับทราบการขอลาพักการศึกษาแล้ว และยินดีให้ปฏิบัติตามความประสงค์ของนักศึกษา <br>จึงเรียนมาเพื่อโปรดทราบ</label>
+                          </div>
+
+                          <div class="col-4">
+                              <label class="from-label"></label>
+                          </div>
+
+                          <div class="col-4">
+                              <label for="exampleFormControlFile1">ขอแสดงความนับถือ<br>ผู้ปกครองนักศึกษา</label>
+                              <input type="file" class="form-control-file" id="exampleFormControlFile1" required>
+                              <div class="invalid-feedback">
+                                  โปรดอัพโหลดลายเซ็นผู้ปกครอง
+                              </div>
+                          </div>
+                      </div>
+                <hr>
+                </div>
+                <div class="col-12">
+                    <h5><ins>ขั้นตอนการเสนอคําร้องลาพักการศึกษา</ins></h5>
+                    <h6>1.นักศึกษากรอกคําร้องขอลาพักการศึกษา <br>
+                        2.เสนอคําร้องต่อหัวหน้ากลุ่มภารกิจทะเบียนเรียน ประมวลผลฯ<br>
+                        3.เสนอคําร้องต่อผู้อํานวยการสํานักบริหารและพัฒนาวิชาการ (ชั้น 3 อาคารอํานวย
+                        ยศสุข)<br>
+                        4.เสนอคําร้องต่ออาจารย2ที่ปรึกษา (คณะที่นักศึกษาสังกัด)<br>
+                        5.เสนอคําร้องต่อประธานคณะกรรมการประจําหลักสูตร (คณะที่นักศึกษาสังกัด)<br>
+                        6.เสนอคําร้องต่อคณบดี เพื่ออนุมัติ (คณะที่นักศึกษาสังกัด)<br>
+                        7.นําคําร้องไปชําระเงิน (กองคลัง ชั้น 2 อาคารอิงคศรีกสิการ)<br>
+                        8.นําคําร้องขอลาพักการศึกษา ที่ชําระเงินแล้ว (ยื่นต่อกลุ่มภารกิจทะเบียนเรียนฯ)
+                        เพื่อบันทึกฐานข้อมูลนักศึกษาต่อไป<br>
+                        9.เจ้าหน้าที่ทะเบียนฯ บันทึกลงฐานข้อมูล นักศึกษาสามารถตรวจสอบได้ในวันต่อไป </h6>
+                </div>
+            </div>
+
+            <hr class="my-4">
+
+            <button class="w-100 btn btn-primary btn-lg" type="submit">ส่งคำร้องลาพักการศึกษา</button>
+            </form>
+    </div>
+    </div>
+    </main>
+
+    <footer class="my-5 pt-5 text-muted text-center text-small">
+        <p class="mb-1">&copy; 6204101328 ปรมินทร์ กรกีรติการ</p>
+    </footer>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
+
+    <script src="checkout/form-validation.js"></script>
+</body>
+
+</html
